@@ -9,12 +9,9 @@
 body{
     width: 100%;
     background-color: #e0f3f5;
-    margin: 5px auto;
+    margin: 0px auto;
 }
 
-html{
-    background-color: #e0f3f5;
-}
 
 /*END OF MAIN DOCUMENT STYLING*/
 
@@ -22,6 +19,9 @@ html{
 #main-header{
     text-align: center;
     padding: 1em;
+    border-top: 2px solid #a3dbe1;
+    border-right: 2px solid #a3dbe1;
+    border-left: 2px solid #a3dbe1;
 }
 
 #contact-bar{
@@ -31,7 +31,9 @@ html{
     text-align: center;
     align-items: center;
     background-color: #f9cdc8;
-    border: 1px solid #a3dbe1;
+    border-top: 2px solid #a3dbe1;
+    border-right: 2px solid #a3dbe1;
+    border-left: 2px solid #a3dbe1;
 }
 
 #contact-bar a{
@@ -86,6 +88,9 @@ footer{
     font-size: .75em;
     text-align: center;
     padding: 10px;
+    border-bottom: 2px solid #a3dbe1;
+    border-right: 2px solid #a3dbe1;
+    border-left: 2px solid #a3dbe1;
 }
 
 footer a{
