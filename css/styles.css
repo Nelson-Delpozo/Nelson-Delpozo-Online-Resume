@@ -1,3 +1,5 @@
+/*MAIN DOCUMENT STYLING*/
+
 *{
     box-sizing: border-box;
     color: black;
@@ -5,6 +7,12 @@
 
 body{
     width: 100%;
-    background-color: yellow;
+    background-color: #72ddf7;
+    margin: 2em auto;
 }
 
+html{
+    background-color: #f6ca83;
+}
+
+/*END OF MAIN DOCUMENT STYLING*/
