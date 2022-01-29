@@ -1,38 +1,43 @@
 /*STYLESHEET*/
-body {
+
+/*THIS IS FOR THE BLINKING CONSOLE TEXT*/
+#typewriter-text-container {
     padding: 0;
     margin: 0;
     background-color: #000;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
 }
 
-h1 {
+#myName {
+    font-size: 4em;
     position: relative;
     color: #03A062;
     font-weight: bold;
     font-family: 'VT323', monospace;
-    letter-spacing: 7px;
+    letter-spacing: 5px;
     overflow: hidden;
     border-right: 2px solid hsl(0, 0%, 80%);
     white-space: nowrap;
-    animation: typewriter 2s steps(26) 1s 1 normal both,
+    animation: typewriter 1.5s steps(26) 1s 1 normal both,
     blinkTextCursor 500ms infinite;
 }
 
-p {
+#myTitle {
+    font-size: 2em;
     position: relative;
     color: #03A062;
     font-weight: bold;
     font-family: 'VT323', monospace;
-    letter-spacing: 7px;
+    letter-spacing: 5px;
     overflow: hidden;
     border-right: 2px solid hsl(0, 0%, 80%);
     white-space: nowrap;
-    animation: typewriter 2s steps(26) 1s 1 normal both,
-    blinkTextCursor 500ms infinite;
+    animation: typewriter 2s steps(26) 3s 1 normal both,
+    blinkTextCursor2 500ms infinite;
 }
 
 @keyframes typewriter {
@@ -40,15 +45,237 @@ p {
         width: 0;
     }
     to {
-        width: 315px;
+        width: 425px;
     }
 }
 
 @keyframes blinkTextCursor {
     from {
-        border-right-color: hsl(0, 0%, 80%);
+        border-right-color: hsl(0, 0%, 50%);
     }
     to {
         border-right-color: transparent;
     }
 }
+
+@keyframes blinkTextCursor2 {
+    from {
+        border-right-color: hsl(0, 0%, 0%);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+/*END OF BLINKING CONSOLE TEXT OPENING*/
+
+/*SCROLL DOWN ARROW ANIMATION*/
+
+.mouse_scroll {
+    display: block;
+    width: 24px;
+    height: 100px;
+    margin-top: 125px;
+}
+
+
+.m_scroll_arrows {
+    display: block;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+    border-right: 2px solid #03A062;
+    border-bottom: 2px solid #03A062;
+    margin: 0 0 3px 4px;
+    width: 16px;
+    height: 16px;
+}
+
+.one {
+    margin-top: 1px;
+}
+
+.one, .two, .three {
+    -webkit-animation: mouse-scroll 1s infinite;
+    -moz-animation: mouse-scroll 1s infinite;
+    animation: mouse-scroll 1s infinite;
+
+}
+
+.one {
+    -webkit-animation-delay: .1s;
+    -moz-animation-delay: .1s;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+.two {
+    -webkit-animation-delay: .2s;
+    -moz-animation-delay: .2s;
+    -webkit-animation-direction: alternate;
+    animation-delay: .2s;
+    animation-direction: alternate;
+    margin-top: -6px;
+}
+
+.three {
+    -webkit-animation-delay: .3s;
+    -moz-animation-delay: .3s;
+    -webkit-animation-direction: alternate;
+    animation-delay: .3s;
+    animation-direction: alternate;
+    margin-top: -6px;
+}
+
+.mouse {
+    height: 42px;
+    width: 24px;
+    border-radius: 14px;
+    transform: none;
+    border: 2px solid #03A062;
+    top: 170px;
+}
+
+.wheel {
+    display: block;
+    margin: 5px auto;
+    background: white;
+    position: relative;
+    height: 4px;
+    width: 4px;
+    border: 2px solid #03A062;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
+
+.wheel {
+    -webkit-animation: mouse-wheel 0.6s linear infinite;
+    -moz-animation: mouse-wheel 0.6s linear infinite;
+    animation: mouse-wheel 0.6s linear infinite;
+}
+
+@-webkit-keyframes mouse-wheel {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(6px);
+        -ms-transform: translateY(6px);
+        transform: translateY(6px);
+    }
+}
+
+@-moz-keyframes mouse-wheel {
+    0% {
+        top: 1px;
+    }
+    25% {
+        top: 2px;
+    }
+    50% {
+        top: 3px;
+    }
+    75% {
+        top: 2px;
+    }
+    100% {
+        top: 1px;
+    }
+}
+
+@-o-keyframes mouse-wheel {
+
+    0% {
+        top: 1px;
+    }
+    25% {
+        top: 2px;
+    }
+    50% {
+        top: 3px;
+    }
+    75% {
+        top: 2px;
+    }
+    100% {
+        top: 1px;
+    }
+}
+
+@keyframes mouse-wheel {
+
+    0% {
+        top: 1px;
+    }
+    25% {
+        top: 2px;
+    }
+    50% {
+        top: 3px;
+    }
+    75% {
+        top: 2px;
+    }
+    100% {
+        top: 1px;
+    }
+}
+
+@-webkit-keyframes mouse-scroll {
+
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes mouse-scroll {
+
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes mouse-scroll {
+
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes mouse-scroll {
+
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*END OF SCROLLEY-MOUSE ANIMATION THING*/
