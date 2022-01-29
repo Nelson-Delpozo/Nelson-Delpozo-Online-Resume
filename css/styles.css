@@ -1,1 +1,54 @@
 /*STYLESHEET*/
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1 {
+    position: relative;
+    color: #03A062;
+    font-weight: bold;
+    font-family: 'VT323', monospace;
+    letter-spacing: 7px;
+    overflow: hidden;
+    border-right: 2px solid hsl(0, 0%, 80%);
+    white-space: nowrap;
+    animation: typewriter 2s steps(26) 1s 1 normal both,
+    blinkTextCursor 500ms infinite;
+}
+
+p {
+    position: relative;
+    color: #03A062;
+    font-weight: bold;
+    font-family: 'VT323', monospace;
+    letter-spacing: 7px;
+    overflow: hidden;
+    border-right: 2px solid hsl(0, 0%, 80%);
+    white-space: nowrap;
+    animation: typewriter 2s steps(26) 1s 1 normal both,
+    blinkTextCursor 500ms infinite;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 315px;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: hsl(0, 0%, 80%);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
