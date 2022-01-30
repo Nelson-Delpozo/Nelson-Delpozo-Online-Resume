@@ -286,28 +286,18 @@ body *{
 }
 
 /*END OF SCROLL-MOUSE ANIMATION THING*/
-
-#second-section{
-    margin: 10px auto;
-    max-width: 80%;
-    color: #03A062;
-}
-#third-section{
-    margin: 10px auto;
-    max-width: 80%;
-    color: #03A062;
+#skills-container{
+    display: flex;
+    justify-content: space-evenly;
 }
 
-#fourth-section{
-    margin: 10px auto;
-    max-width: 80%;
+#skills-container *{
     color: #03A062;
+    font-size: 1.5em;
+    margin-bottom: 0;
+    margin-top: 0;
 }
-#fifth-section{
-    margin: 10px auto;
-    max-width: 80%;
-    color: #03A062;
-}
+
 
 
 
