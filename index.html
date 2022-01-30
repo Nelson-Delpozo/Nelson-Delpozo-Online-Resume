@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <link rel="stylesheet" href="css/styles.css">
     <title>Nelson Delpozo</title>
 </head>
@@ -16,11 +17,10 @@
 <!--OPENING BODY TAG-->
 <body>
 
-<div id="typewriter-text-container">
+<div id="typewriter-text-container" data-aos="fade-up">
     <h1 id="myName">Nelson Delpozo</h1>
     <p id="myTitle">full-stack web developer</p>
     <div class="mouse_scroll">
-
         <div class="mouse">
             <div class="wheel"></div>
         </div>
@@ -29,9 +29,36 @@
             <span class="m_scroll_arrows two"></span>
             <span class="m_scroll_arrows three"></span>
         </div>
-
     </div>
+</div>
 
+<div id="second-section" data-aos="fade-right" data-aos-delay="1000">
+    <h1>Front-End Skills:</h1>
+</div>
+<div id="third-section" data-aos="fade-left" data-aos-delay="1500">
+    <h2>HTML</h2>
+    <h2>CSS/FlexBox</h2>
+    <h2>Bootstrap5/MDB</h2>
+    <h2>JavaScript</h2>
+    <h2>jQuery</h2>
+</div>
+
+<div id="fourth-section" data-aos="fade-right" data-aos-delay="2000">
+    <h1>Back-End Skills:</h1>
+</div>
+<div id="fifth-section" data-aos="fade-left" data-aos-delay="2500">
+    <h2>Linux</h2>
+    <h2>Apache Web Server</h2>
+    <h2>MySQL</h2>
+    <h2>Java</h2>
+    <h2>Spring Boot</h2>
+</div>
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 <!--CLOSING BODY TAG-->
 </body>
 <!--END OF BODY-->
