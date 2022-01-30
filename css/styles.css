@@ -298,6 +298,21 @@ body *{
     margin-top: 0;
 }
 
+#projects{
+    margin-top: 50px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+}
+#projects *{
+    color: #03A062;
+    font-size: 2em;
+    margin: 0 5px;
+}
 
+#second-mouse{
+    display: flex;
+    justify-content: center;
+}
 
 
