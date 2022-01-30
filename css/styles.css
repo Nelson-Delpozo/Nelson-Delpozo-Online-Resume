@@ -1,9 +1,10 @@
 /*STYLESHEET*/
-body{
+body {
     background-image: url("/img/web-background.jpeg");
 
 }
-body *{
+
+body * {
     font-family: 'VT323', monospace;
 }
 
@@ -286,31 +287,35 @@ body *{
 }
 
 /*END OF SCROLL-MOUSE ANIMATION THING*/
-#skills-container{
+
+/*SKILLS*/
+#skills-container {
     display: flex;
     justify-content: space-evenly;
 }
 
-#skills-container *{
+#skills-container * {
     color: #03A062;
     font-size: 1.5em;
     margin-bottom: 0;
     margin-top: 0;
 }
 
-#projects{
+/*PROJECTS*/
+#projects {
     margin-top: 50px;
     margin-bottom: 100px;
     display: flex;
     justify-content: center;
 }
-#projects *{
+
+#projects * {
     color: #03A062;
     font-size: 2em;
     margin: 0 5px;
 }
 
-#second-mouse{
+#second-mouse {
     display: flex;
     justify-content: center;
 }
