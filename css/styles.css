@@ -1,6 +1,12 @@
 /*STYLESHEET*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
 body {
     background-color: black;
+    overflow-x: hidden;
 }
 
 body * {
@@ -16,11 +22,9 @@ body * {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-
 }
 
 #myName {
-    font-size: 4em;
     position: relative;
     color: #03A062;
     font-weight: bold;
@@ -34,17 +38,14 @@ body * {
 }
 
 #myTitle {
-    font-size: 2em;
     position: relative;
     color: #03A062;
     font-weight: bold;
     font-family: 'VT323', monospace;
     letter-spacing: 5px;
     overflow: hidden;
-    border-right: 2px solid hsl(0, 0%, 80%);
     white-space: nowrap;
-    animation: typewriter 2s steps(26) 3s 1 normal both,
-    blinkTextCursor2 500ms infinite;
+    animation: typewriter2 2s steps(26) 3s 1 normal both
 }
 
 @keyframes typewriter {
@@ -52,22 +53,22 @@ body * {
         width: 0;
     }
     to {
-        width: 425px;
+        width: 250px;
+    }
+}
+
+@keyframes typewriter2 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 270px;
     }
 }
 
 @keyframes blinkTextCursor {
     from {
         border-right-color: hsl(0, 0%, 50%);
-    }
-    to {
-        border-right-color: transparent;
-    }
-}
-
-@keyframes blinkTextCursor2 {
-    from {
-        border-right-color: hsl(0, 0%, 0%);
     }
     to {
         border-right-color: transparent;
@@ -85,7 +86,6 @@ body * {
     margin-top: 125px;
 }
 
-
 .m_scroll_arrows {
     display: block;
     -ms-transform: rotate(45deg); /* IE 9 */
@@ -98,18 +98,14 @@ body * {
     height: 16px;
 }
 
-.one {
-    margin-top: 1px;
-}
-
 .one, .two, .three {
     -webkit-animation: mouse-scroll 1s infinite;
     -moz-animation: mouse-scroll 1s infinite;
     animation: mouse-scroll 1s infinite;
-
 }
 
 .one {
+    margin-top: 1px;
     -webkit-animation-delay: .1s;
     -moz-animation-delay: .1s;
     -webkit-animation-direction: alternate;
@@ -153,9 +149,6 @@ body * {
     border: 2px solid #03A062;
     -webkit-border-radius: 8px;
     border-radius: 8px;
-}
-
-.wheel {
     -webkit-animation: mouse-wheel 0.6s linear infinite;
     -moz-animation: mouse-wheel 0.6s linear infinite;
     animation: mouse-wheel 0.6s linear infinite;
@@ -290,33 +283,56 @@ body * {
 /*SKILLS*/
 #skills-container {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
 }
 
 #skills-container * {
     color: #03A062;
-    font-size: 1.5em;
     margin-bottom: 0;
     margin-top: 0;
 }
 
-/*PROJECTS*/
+#back {
+    margin-top: 25px;
+}
+
+/*PROJECTS SECTION*/
 #projects {
     margin-top: 50px;
     margin-bottom: 100px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 #projects * {
     color: #03A062;
-    font-size: 2em;
     margin: 0 5px;
 }
 
 #second-mouse {
     display: flex;
     justify-content: center;
+}
+
+
+/*MEDIA QUERIES*/
+@media screen and (min-width: 768px) {
+    #skills-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #back {
+        margin-top: 0;
+    }
+
+    #projects {
+        flex-direction: row;
+        align-items: flex-start;
+    }
 }
 
 
